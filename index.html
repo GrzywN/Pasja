@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Fryzur Pasja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <script src="./js/nav.js" defer></script> 
+</head>
+<body>
+    <header class="nav-bar">
+        <div class="nav-bar__logo">
+            <img src="./img/logo.png" alt="Logo Studia Fryzur Pasja" class="nav-bar__logo--height">
+            <h1>
+                Studio Fryzur Pasja
+            </h1>
+        </div>
+        <nav>
+            <ul id="nav-bar__nav" class="nav-bar__nav resize-animation-stopper">
+                <li class="active">
+                    <a href="#o-nas" class="nav-bar__nav__a">
+                        O nas
+                    </a>
+                    <span class="nav-bar__nav__underline"></span>
+                </li>
+                <li>
+                    <a href="#uslugi" class="nav-bar__nav__a">
+                        Usługi
+                    </a>
+                    <span class="nav-bar__nav__underline disabled"></span>
+                </li>
+                <li>
+                    <a href="#lokalizacja" class="nav-bar__nav__a">
+                        Lokalizacja
+                    </a>
+                    <span class="nav-bar__nav__underline disabled"></span>
+                </li>
+                <li>
+                    <a href="#wizyta" class="nav-bar__nav__a">
+                        Jak umówić się na wizytę
+                    </a>
+                    <span class="nav-bar__nav__underline disabled"></span>
+                </li>
+                <li>
+                    <a href="#kontakt" class="nav-bar__nav__a">
+                        Kontakt
+                    </a>
+                    <span class="nav-bar__nav__underline disabled"></span>
+                </li>
+            </ul>
+        </nav>
+        <button class="nav-bar__menu-toggle">
+            <img src="./img/more.png" alt="Menu">
+        </button>
+    </header>
+    <main class="content">
+        <section id="o-nas" class="section section--o-nas">
+            <div class="section__container section__container--o-nas">
+                <h1 class="section__h1 section__h1--o-nas">
+                    O nas
+                </h1>
+                <form action="#o-nas" method="get">
+                    <button class="section__btn section__btn--up" style="visibility: hidden;"></button>
+                </form>
+                <span class="section__underline section__underline--o-nas"></span>
+                <div class="section__content section__content--o-nas">
+                    <h2>
+                        <b>Studio Fryzur Pasja</b>
+                    </h2>
+                    <p>
+                            to fryzjerski salon w Koziegłowach. <wbr>
+                            Stanowimy zgrany zespół fryzerów, którzy dzięki pasji i ciężkiej pracy zajmują się kompleksową obsługą fryzjerską.
+                            Nasi styliści uczestniczą w szkoleniach oraz uczęszczają na pokazy i targi fryzjerskie,<wbr> w celu zapewnienia jak najlepszych usług klientom.<wbr>
+                            Stawiamy na najnowsze trendy i stylizacje,<wbr> jednak zawsze staramy się sprostać oczekiwaniom kilentów i dopasować fryzurę idealną do danej osoby.
+                            Zapewniamy usługi stylizacyjne włosów,<wbr> jak i zabiegi regenerujące.<wbr> W naszym studio nie zabraknie jednak innych usług kosmetycznych.
+                    </p>
+                </div>
+                <span class="section__underline section__underline--o-nas"></span>
+                <form action="#uslugi" method="get">
+                    <button class="section__btn section__btn--down"></button>
+                </form>  
+            </div>
+        </section>
+        <section id="uslugi" class="section section--uslugi">
+            <div class="section__container section__container--uslugi">
+                <h1 class="section__h1 section__h1--uslugi">
+                    Usługi
+                </h1>
+                <form action="#o-nas" method="get">
+                    <button class="section__btn section__btn--up"></button>
+                </form>
+                <span class="section__underline section__underline--uslugi"></span>
+                <div class="section__content section__content--uslugi">
+                    <p>
+                        Świadczymy jako zgrany zespół usługi z zakresu fryzjerstwa, kosmetyki i kosmetologii. Dzięki pasji i kursom stale powiększamy zakres wiedzy z tych dziedzin,
+                         aby zapewnić jak najlepsze wrażenia dla naszych klientów. Stawiamy na najnowsze trendy i stylizacje,<wbr> jednak zawsze staramy się sprostać oczekiwaniom kilentów i dopasować fryzurę idealną do danej osoby.
+                         Zapewniamy usługi stylizacyjne włosów,<wbr> jak i zabiegi regenerujące. 
+                         Korzystamy z gammy przetestowanych przez nas produktów najwyższej jakości. Są u nas również usługi regenracyjne do włosów, skóry i paznokci.
+                    </p>
+                </div>
+                <span class="section__underline section__underline--uslugi"></span>
+                <form action="#lokalizacja" method="get">
+                    <button class="section__btn section__btn--down"></button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="lokalizacja" class="section section--lokalizacja">
+            <div class="section__container section__container--lokalizacja">
+                <h1 class="section__h1 section__h1--lokalizacja">
+                    Lokalizacja
+                </h1>
+                <form action="#uslugi" method="get">
+                    <button class="section__btn section__btn--up"></button>
+                </form>
+                <span class="section__underline section__underline--lokalizacja"></span>
+                <div class="section__content section__content--lokalizacja">
+                    <p>
+                        Nasze studio fryzur znajduję się w miejscowości niedaleko Częstochowy - w Koziegłowach.
+                        Niektórzy klienci, którzy dażą nas sympatią odwiedzają nas nawet ze stolicy Polski,
+                        choć sieć naszych klientów stanowią raczej pobliskie miejscowości.
+                        Salon znajduję się na placu, na ulicy Żareckiej 24.
+                    </p>
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.497474397219!2d19.163182316124708!3d50.59929297949619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47173277e812331f%3A0x1116d0ea93a8203e!2s%C5%BBarecka%2024%2C%2042-350%20Kozieg%C5%82owy!5e0!3m2!1spl!2spl!4v1641589212962!5m2!1spl!2spl" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    class="section__iframe section__iframe--lokalizacja">
+                    </iframe>
+                </div>
+                <span class="section__underline section__underline--lokalizacja"></span>
+                <form action="#wizyta" method="get">
+                    <button class="section__btn section__btn--down"></button>
+                </form>
+            </div>
+        </section>
+
+        <section id="wizyta" class="section section--wizyta">
+            <div class="section__container section__container--wizyta">
+                <h1 class="section__h1 section__h1--wizyta">
+                    Jak umówić się na wizytę
+                </h1>
+                <form action="#lokalizacja" method="get">
+                    <button class="section__btn section__btn--up"></button>
+                </form>
+                <span class="section__underline section__underline--wizyta"></span>
+                <div class="section__content section__content--wizyta">
+                    <p>
+                        Aby umówić się na wizytę w naszym salonie fryzjerskim prosimy o kontakt telefoniczny pod numer: 
+                    </p>
+                    <span class="phone-number">512-499-648</span>
+                    <p>
+                        W celu zapytań o nasze usługi i produkty zalecamy skorzystanie z formularza kontaktowego w dolnej części strony.
+                    </p>
+                </div>
+                <span class="section__underline section__underline--wizyta"></span>
+                <form action="#kontakt" method="get">
+                    <button class="section__btn section__btn--down"></button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="kontakt" class="section section--kontakt">
+            <div class="section__container section__container--kontakt">
+                <h1  class="section__h1 section__h1--kontakt">
+                    Kontakt
+                </h1>
+                <form action="#wizyta" method="get" class="section__btn">
+                    <button class="section__btn section__btn--up"></button>
+                </form>
+                <span class="section__underline section__underline--kontakt"></span>
+                <div class="section__content section__content--kontakt">
+                    <form action="https://formsubmit.co/optymalizacjakb@gmail.com" method="post" enctype="text/plain" class="section__form section__form--kontakt">
+                        <label>Imię</label><label>Nazwisko</label>
+                        <div class="form__item form-item">
+                            <input type="text" name="Imie" class="form__input form__input--firstnm" placeholder="Imię" required>
+                            <input type="text" name="Nazwisko" class="form__input form__input--lastnm" placeholder="Nazwisko" required>
+                        </div>
+                        
+                        <div class="form__item">
+                            
+                            
+                        </div>
+                        <label>Adres E-mail</label>
+                        <div class="form__item">
+                            
+                            <input type="email" name="E-mail" class="form__input form__input--email" placeholder="E-mail" required>
+                        </div>
+                        <label>Numer telefonu</label>
+                        <div class="form__item">
+                            <input type="tel" name="Telefon" class="form__input form__input--tel" placeholder="Numer telefonu" pattern="[0-9]{9}">
+                        </div>
+                        <label>Treść wiadomości</label>
+                        <div class="form__item">
+                            <input type="text" name="Wiadomosc" class="form__input form__input--text" placeholder="Tutaj napisz treść wiadomości" required>
+                        </div>
+                        <input type="hidden" name="_subject" value="Ktos chcial sie z tobą skontaktować!">
+                        <button>
+                            
+                        </button>
+                    </form>
+                </div>
+                <span class="section__underline section__underline--kontakt"></span>
+                <form action="#footer" method="get">
+                    <button class="section__btn section__btn--down"></button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="footer__socials">
+            <a href="#"><img src="./img/facebook.png" alt="Facebook" class="footer__img"></a>
+            <a href="#"><img src="./img/instagram.png" alt="Instagram" class="footer__img"></a>
+            <a href="#"><img src="./img/pin.png" alt="Google Maps" class="footer__img"></a>
+        </div>
+        <a href="#o-nas" class="footer__a footer__a--up nav-bar__nav__a">
+            Przewiń do góry
+        </a>
+        <div class="footer_designedby">
+            
+            <div class="footer__a nav-bar__nav__a">
+                <a href="https://github.com/GrzywN" class="footer__a nav-bar__nav__a">
+                    Designed and coded by Karol Binkowski for Studio Fryzur Pasja @ 2022
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
