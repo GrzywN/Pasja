@@ -1,7 +1,7 @@
 const navToggle = document.querySelector(".nav-bar__menu-toggle");
 const nav = document.querySelector(".nav-bar__nav")
 
-var buttonChecked = false;
+let buttonChecked = false;
 
 navToggle.addEventListener("click", () => {
     if (nav.style.transform === "translateX(100%)") {
@@ -46,22 +46,4 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(() => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-document.querySelectorAll('form[action^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('action')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
 });

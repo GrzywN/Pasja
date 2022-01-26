@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;0,300;1,200;1,300;1,400&display=swap');
+
 /* Klasy ogólne dla całej strony */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+:root {
+    --fnt-decoration: 'Lobster', cursive;;
+    --fnt-sans-serif: 'Be Vietnam Pro', sans-serif;;
+    --clr-grey: #D0D6D9;
+    --clr-black: #1a1a1a;
 }
 
 html {
@@ -11,37 +20,17 @@ html {
 }
 
 body {
+    color: var(--clr-black);
     width: 100vw;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100%;
     overflow: hidden;
 }
 
-a {
-    behavior: smooth;
-}
-
 /* Klasy pomocnicze*/
-
-.disabled {
-    display: none !important;
-}
-
-.flex {
-    display: flex !important;
-}
-
-.font__playfair-display {
-    font-family: 'Playfair Display', serif;
-}
-
-.font__lobster {
-    font-family: 'Lobster', cursive;
-}
 
 .resize-animation-stopper * {
     animation: none !important;
@@ -51,15 +40,15 @@ a {
 /* Klasy odpowiedzialne za nagłówek i nawigację strony*/
 
 .nav-bar {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fnt-sans-serif);
     position: fixed;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 2em;
-    color: black;
-    background-color: #D0D6D9;
+    color: var(--clr-black);
+    background-color: var(--clr-grey);
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
@@ -67,7 +56,8 @@ a {
     display: flex;
     align-items: center;
     gap: 1em;
-    font-family: 'Lobster', cursive;
+    font-family: var(--fnt-decoration);
+    user-select: none
 }
 
 .nav-bar__logo--height {
@@ -81,28 +71,20 @@ a {
     list-style: none;
 }
 
-.nav-bar__nav__a {
+.nav-bar__a {
     text-decoration: none;
-    color: black;
+    color: var(--clr-black);
     text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
     transition: text-shadow 0.5s;
 }
 
-.nav-bar__nav__a:hover {
+.nav-bar__a:hover {
 text-shadow: 1px 1px 2px grey, 0 0 1em grey, 0 0 0.2em grey;
 }
 
-.nav-bar__nav__a:focus {
+.nav-bar__a:focus {
 text-shadow: 1px 1px 2px grey, 0 0 1em grey, 0 0 0.2em grey;
 outline: none;
-}
-
-.nav-bar__nav__underline {
-    display: block;
-    background-color: black;
-    width: 100%;
-    height: 2px;
-    border-radius: 25%;
 }
 
 .nav-bar__menu-toggle {
@@ -138,6 +120,14 @@ Część odpowiedzialna za główną sekcję strony
     background-size: cover;
     background-repeat: no-repeat;
     scroll-snap-align: start;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+
+.section::-webkit-scrollbar {
+    display: none;
 }
 
 .section__container {
@@ -149,19 +139,21 @@ Część odpowiedzialna za główną sekcję strony
 }
 
 .section__content {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fnt-sans-serif);
     font-size: 1.5em;
-    color: black;
+    line-height: 150%;
+    color: var(--clr-black);
     text-align: center;
     border-radius: 20px;
     padding: 0.5em;
+    min-width: 70vw;
 }
 
 .section__btn {
-    width: 5em;
-    height: 5em;
+    width: 5rem;
+    height: 5rem;
     background-position: center;
-    background-size: 4em, 4em;
+    background-size: 4rem, 4rem;
     background-repeat: no-repeat;
     background-color: transparent;
     border: 0;
@@ -181,6 +173,14 @@ Część odpowiedzialna za główną sekcję strony
     background-image: url(./img/arrow_down.png);
 }
 
+.section__btn--left {
+    background-image: url(./img/arrow_left.png);
+}
+
+.section__btn--right {
+    background-image: url(./img/arrow_right.png);
+}
+
 /* Koniec części ogólnej sekcji głównej strony */
 
 .section--o-nas{
@@ -192,13 +192,14 @@ Część odpowiedzialna za główną sekcję strony
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
-.section__h1 {
+.section__h2 {
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 8em;
+    text-shadow: 0px 0px 40px rgba(0,0,0,0.5);
 }
 
-.section__h1--o-nas {
+.section__h2--o-nas {
     font-family: 'Lobster', cursive;
     font-size: 8em;
     color: #327173;
@@ -223,7 +224,7 @@ Część odpowiedzialna za główną sekcję strony
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
-.section__h1--uslugi {
+.section__h2--uslugi {
     color: #D94169;
 }
 
@@ -237,6 +238,56 @@ Część odpowiedzialna za główną sekcję strony
     background-color: #D94169;
 }
 
+.section--galeria {
+    background-image: url(./img/background6.jpg);
+}
+
+.section__h2--galeria {
+    font-size: 6rem;
+    line-height: 0;
+}
+
+.section__container--galeria {
+    margin-top: 6em;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.section__content--galeria {
+    background-color: var(--clr-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40vw;
+}
+
+.section__gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 2000px;
+    max-width: min(30rem, 80vh);
+    max-height: min(30rem, 80vh);
+    border-radius: 20px;
+}
+
+.section__img {
+    height: 100%;
+    transition: all ease-in-out 0.3s;
+    aspect-ratio: 1;
+    max-width: min(30rem, 80vh);
+    max-height: min(30rem, 80vh);
+    object-fit:contain;
+    object-position: center;
+}
+
+.section__underline--galeria {
+    width: 20%;
+    height: 4px;
+    background-color: var(--clr-black);
+}
+
 .section--lokalizacja {
     background-image: url(./img/background2.jpg);
 }
@@ -246,12 +297,12 @@ Część odpowiedzialna za główną sekcję strony
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
-.section__h1--lokalizacja {
+.section__h2--lokalizacja {
     color: #F2AE30;
 }
 
 .section__iframe--lokalizacja {
-    max-width: 16em;
+    width: min(50vh, 20em);
     aspect-ratio: 1;
 }
 
@@ -262,7 +313,7 @@ Część odpowiedzialna za główną sekcję strony
     align-items: center;
     gap: 2em;
     background-color: #BF9D60;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fnt-sans-serif);
 }
 
 .section__underline--lokalizacja {
@@ -284,20 +335,25 @@ Część odpowiedzialna za główną sekcję strony
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
-.section__h1--wizyta {
+.section__h2--wizyta {
     font-size: 7em;
-    color: #A67C58;
+    color: #D99F59;
 }
 
 .section__content--wizyta {
-    background-color: #D9CCC1;
-    min-width: 50%;
+    background-color: #A67C58;
+    max-width: 50%;
 }
 
 .section__underline--wizyta {
     width: 20%;
     height: 4px;
-    background-color: #A67C58;
+    background-color: #D99F59;
+}
+
+.section__phone-number {
+    text-align: center;
+    line-height: 1rem;
 }
 
 .section--kontakt {
@@ -309,10 +365,11 @@ Część odpowiedzialna za główną sekcję strony
     text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
 
-.section__h1--kontakt {
+.section__h2--kontakt {
     font-family: 'Lobster', cursive;
     font-size: 7em;
     color: #A67C58;
+    line-height: .8em;
 }
 
 .section__content--kontakt {
@@ -336,15 +393,20 @@ Część odpowiedzialna za główną sekcję strony
 .form__item {
     display: flex;
     flex-direction: column;
-    min-width: 40vh;
+    width: 40vh;
 }
 
 .form__input {
     min-height: 3rem;
     text-align: center;
-    min-width: 50%;
+    width: 100%;
     border: none;
     border-radius: 20px;
+    border: 1px solid #A67C58;
+}
+
+.form__input:focus{
+    outline: 2px solid #A67C58;
 }
 
 .form__item:first-of-type {
@@ -367,8 +429,19 @@ Część odpowiedzialna za główną sekcję strony
     min-height: 6rem;
 }
 
-.phone-number {
-    font-size: 6em;
+.form__btn {
+    margin-top: 1em;
+    min-height: 3em;
+    min-width: 6em;
+    border-radius: 20px;
+    border: 1px solid #A67C58;
+    background-color: white;
+    color: var(--clr-black);
+    font-size: 1rem;
+}
+
+.form__btn:hover {
+    background-color: #A67C58;
 }
 
 /* Część odpowiedzialna za footer strony */
@@ -380,6 +453,7 @@ Część odpowiedzialna za główną sekcję strony
     justify-content: space-between;
     gap: 1em;
     padding: 1em;
+    position: sticky;
 }
 
 .footer__socials {
@@ -394,6 +468,19 @@ Część odpowiedzialna za główną sekcję strony
 
 .footer__a {
     font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: var(--clr-black);
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    transition: text-shadow 0.5s;
+}
+
+.footer__a:hover {
+text-shadow: 1px 1px 2px grey, 0 0 1em grey, 0 0 0.2em grey;
+}
+
+.footer__a:focus {
+text-shadow: 1px 1px 2px grey, 0 0 1em grey, 0 0 0.2em grey;
+outline: none;
 }
 
 .footer__a--up {
@@ -412,10 +499,24 @@ Część odpowiedzialna za główną sekcję strony
 
 /* Część odpowiedzialna za responsywność strony */
 
-@media (max-width: 35em) {
+@media (max-width: 1100px) {
+    html {
+        font-size: 0.8rem;
+    }
+    .section__content--lokalizacja {
+        flex-direction: column;
+    }
+
+    .section__phone-number {
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width: 562px) {
 
     html {
-        font-size: 0.6em;
+        font-size: 0.6rem;
     }
 
     .nav-bar__nav {
@@ -443,10 +544,22 @@ Część odpowiedzialna za główną sekcję strony
         flex-direction: column;
     }
 
+    .section__phone-number {
+        font-size: 2.5em;
+    }
 }
 
 @media (max-width: 436px) {
     .nav-bar__logo h1 {
         visibility: hidden;
+    }
+}
+
+@media (min-width: 700px) {
+    .section__content {
+        font-size: clamp(.5vw, .8vw + .5rem, 2vw + 1rem);
+    }
+    .section__phone-number {
+        font-size: 4em;
     }
 }
